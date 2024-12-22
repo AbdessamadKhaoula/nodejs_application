@@ -6,7 +6,7 @@ pipeline {
     }
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
-        APP_NAME = "nodeJs-app"
+        APP_NAME = "nodejs-app"
         RELEASE = "1.0.0"
         DOCKER_USER = "khaoulaabdessamad"
         DOCKER_PASS = 'dockerHub'
