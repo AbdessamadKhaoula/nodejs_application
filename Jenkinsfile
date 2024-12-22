@@ -27,8 +27,8 @@ pipeline {
         stage("Sonarqube Analysis") {
             steps {
                 withSonarQubeEnv('SonarQube-Server') {
-                    sh '''$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=nodeJs-app-CI \
-                    -Dsonar.projectKey=nodeJs-app-CI'''
+                    sh '''$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=node-js-app-CI \
+                    -Dsonar.projectKey=node-js-app-CI'''
                 }
             }
         }
