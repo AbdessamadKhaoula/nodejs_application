@@ -46,9 +46,12 @@ pipeline {
         }
         stage('TRIVY FS SCAN') {
             steps {
-                sh "trivy fs --scanners vuln . > trivyfs.txt"
+                sh """
+                export TRIVY_DB_REPO=ghcr.io/aquasecurity/trivy-db
+                trivy fs . > trivyfs.txt """
              }
          }
+}
 	    // stage("Build & Push Docker Image") {
         //      steps {
         //          script {
