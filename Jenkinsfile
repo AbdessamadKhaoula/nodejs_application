@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/AbdessamadKhaoula/pipelineCI-CD-nodejs.git'
+                git branch: 'main', url: 'https://github.com/AbdessamadKhaoula/nodejs_application.git'
             }
         }
         stage("Sonarqube Analysis") {
